@@ -51,11 +51,11 @@ def msgs(event,vk):
 		if peer_id < 2000000000 and user_id > 0:
 			if b[0:8] != "https://":
 				time.sleep(random.randint(1,5))
-				f = open(info.msgs)
+				f = open(info.msgs,encoding='utf-8')
 				data = f.read()
-				msg = data.split('\n')[random.randint(0,len(open('фразы.txt', 'r').readlines()))]
+				msg = data.split('\n')[random.randint(0,len(open('фразы.txt', 'r',encoding='utf-8').readlines()))]
 				vk.messages.setActivity(peer_id=peer_id,type='typing')
-				g = open(info.fotki)
+				g = open(info.fotki,encoding='utf-8')
 				data2 = g.read()
 				photo = data2.split('\n')[random.randint(0,len(open('фотки.txt', 'r',encoding='utf-8').readlines()))]
 				time.sleep(random.randint(5,10))
