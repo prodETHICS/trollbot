@@ -1,0 +1,1 @@
+pip install PyQt5 vk_api python3-anticaptcha
